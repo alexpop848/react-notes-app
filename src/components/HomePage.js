@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import NoteLists from "./NoteLists";
 import NoteDetails from "./NoteDetails";
 import { db } from "../firebase-config";
+import gsap from "gsap";
 import {
   collection,
   getDocs,
@@ -74,6 +75,7 @@ const HomePage = () => {
       // Remove the deleted note from the local state
       const updatedNotes = notes.filter((note) => note.id !== id);
       setNotes(updatedNotes);
+      setIsActive(true);
 
       // Clear the selected note after deleting it
       setSelectedNote(null);

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { db } from "../firebase-config";
 import { updateDoc, doc } from "firebase/firestore";
+import vector from '../media/vector.png'; 
 
 const NoteDetails = ({
   selectedNote,
@@ -104,7 +105,8 @@ const NoteDetails = ({
   if (!note || !note.content) {
     return (
       <div className="note-details">
-        Please select a list to view its items.
+        <h2>Please select a list to view its items.</h2>
+        <img src={vector} alt="vector" />
       </div>
     );
   }

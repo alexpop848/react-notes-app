@@ -1,7 +1,6 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import { updateDoc, doc } from "firebase/firestore";
 import { db } from "../firebase-config";
-import { gsap } from "gsap";
 
 const NoteLists = ({
   notes,
@@ -15,6 +14,8 @@ const NoteLists = ({
 }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedNoteContent, setEditedNoteContent] = useState("");
+
+  const boxRef = useRef(null);
 
   const handleEdit = (noteId, content) => {
     setIsEditing(true);
@@ -63,22 +64,12 @@ const NoteLists = ({
     [notes, setNotes]
   );
 
-  // useEffect(() => {
-  //   gsap.from(listRef.current.children, {
-  //     opacity: 0,
-  //     y: 50,
-  //     stagger: 0.2,
-  //     duration: 0.5,
-  //   });
-  // }, [notes]);
-
-
   return (
     <div className="left-side">
       <h1>Lists</h1>
       <div className="add-note">
-        <form onSubmit={handleAddNote} className="form">
-          <input
+        <form  onSubmit={handleAddNote} className="form">
+          <input 
             type="text"
             placeholder="Please add a new list"
             value={newNote}
@@ -91,7 +82,7 @@ const NoteLists = ({
         <ul>
           {notes.map((note) => (
             <React.Fragment key={note.id}>
-              <li
+              <li 
                 className={`${selectedNote === note.id ? "active" : ""} ${
                   note.completed ? "completed" : ""
                 }`}
@@ -105,7 +96,7 @@ const NoteLists = ({
                       onChange={handleEditInputChange}
                     />
 
-                    <button onClick={() => handleSaveEdit(note.id)}>
+                    <button className="material-symbols-outlined" onClick={() => handleSaveEdit(note.id)}>
                       Save
                     </button>
                   </>
