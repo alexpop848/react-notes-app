@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-React notes application that let's you create, edit and delete notes. Also, notes can be market completed or uncompleted.
+React notes application that let's you create, edit and delete notes.
 </br>
 Users can create new lists and populate them with individual items.
 </br>
