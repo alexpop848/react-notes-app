@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/alexpop848/react-notes-app/static/css/main.5bc2f677.css",
+    "main.js": "/alexpop848/react-notes-app/static/js/main.09f005a0.js",
+    "static/media/vector.png": "/alexpop848/react-notes-app/static/media/vector.d39e3411d12e09afe436.png",
+    "index.html": "/alexpop848/react-notes-app/index.html",
+    "main.5bc2f677.css.map": "/alexpop848/react-notes-app/static/css/main.5bc2f677.css.map",
+    "main.09f005a0.js.map": "/alexpop848/react-notes-app/static/js/main.09f005a0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bc2f677.css",
+    "static/js/main.09f005a0.js"
+  ]
+}
