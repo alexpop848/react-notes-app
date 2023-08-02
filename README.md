@@ -1,6 +1,10 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React notes application that let's you create, edit and delete notes. Also, notes can be market completed or uncompleted.
+</br>
+Users can create new lists and populate them with individual items.
+</br>
+Data storage integration using Cloud Firestore Database.
 
 ## Available Scripts
 
